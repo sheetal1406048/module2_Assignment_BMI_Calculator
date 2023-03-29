@@ -1,0 +1,52 @@
+body{
+    margin : 0;
+    padding : 0;
+    background: url("bmi.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Delicious Handrawn', cursive;
+    
+}
+
+
+#container{
+    margin: auto;
+    padding-top: 100px;;
+    /*border: 10px green solid;*/
+    width:70%;    
+    
+}
+
+#container h1{
+    color: blanchedalmond;   
+}
+
+#result h2{
+    display :inline-block;
+    padding:15px;
+    margin:auto;
+   
+    border-radius: 10%;
+    background-color: black;
+    color:  blanchedalmond;
+    
+    
+    
+}
+.input{
+    color:cyan;
+    font-size: xx-large;
+}
+
+#calculateBtn{
+    padding:10px;
+    border: 2px black solid;
+    border-radius: 20%;
+    background-color:black;
+    color : blanchedalmond;
+    font-family: 'Delicious Handrawn', cursive;
+    font-weight: 900;
+    font-size: x-large;
+}
+

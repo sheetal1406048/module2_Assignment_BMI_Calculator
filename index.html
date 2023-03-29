@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+    <title>BMI Calculator</title>
+</head>
+<body>
+    <div id = "background">
+        <div id = "container">
+            <h1>Calculate Your BMI</h1>
+    
+            <form>
+                <!--Input Weight-->
+                <label class = "input">Weight in kg</label>
+                <input type="number" id = "weightInput">
+               
+                <br> <br>
+                <!--Input Height-->
+                <label class = "input">Height in cm</label>
+                <input type="number" id = "heightInput">                    
+            </form>
+    
+            <br> <br>
+               
+            <!--Show BMI-->
+            <button id = "calculateBtn" onclick="calculateFunction()">Calculate BMI</button>
+            
+            <br> <br>
+            
+            <div id = "result">
+                <h2>Your BMI = <span  id = "show-BMI"></span></h2>
+            </div>      
+        </div>
+    </div>
+    
+    <script>
+
+        function calculateFunction(){
+        
+            var weight = document.getElementById('weightInput').value;
+            weight = parseFloat(weight);
+            //console.log(weight)
+            var height = document.getElementById('heightInput').value;
+            height = parseFloat(height);
+            //console.log(height)
+            var tem = height*height;
+            var BMI = weight*10000/(tem);
+            var result = BMI.toFixed(1);
+            //console.log(result)
+
+            var showBMI = document.getElementById('show-BMI');
+            
+            if(result == "NaN"){
+                alert("Please Enter your height or width correctly!")
+            }
+
+             if(result < 0 || height < 0){
+                 alert("Height or Weight must be greater than zero")
+             }
+            if(result != "NaN" && result > 0 && height > 0){
+                showBMI.innerHTML = result;
+            }
+        }
+        
+
+
+    </script>
+</body>
+</html>
